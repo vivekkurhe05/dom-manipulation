@@ -16,4 +16,6 @@
  * - The browser gives us access to this structure via the DOM API
  * - The DOM API gives us many methods we can use to access the DOM
  * - We typically use JavaScript to execute these methods
+ * 
+ * On console, type console.dir(document) to retrieve document object properties.
  */
