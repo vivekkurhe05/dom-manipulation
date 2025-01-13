@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>What are Nodes</title>
+    </head>
+    <body>
+        <ul>
+            <li>BAM</li>
+            <li>POW</li>
+            <li>KAZAAM</li>
+        </ul>
+        <script>
+            // lets access our list items
+            let listItem_tags = document.getElementsByTagName('li')
+            console.log(listItem_tags)
+            console.log(listItem_tags.length)
+
+            // lets modify the DOM and add a list item
+            listItem_tags[0].parentNode.appendChild(document.createElement('li'))
+            console.log(listItem_tags)
+            console.log(listItem_tags.length)
+
+            let listItems = document.querySelectorAll('li')
+            console.log(listItems)
+            console.log(listItems.length)
+
+            // lets add to the list and prove that the NodeList is static
+            listItems[0].parentNode.appendChild(document.createElement('li'))
+            console.log(listItems)
+            console.log(listItems.length)
+
+            // lets requery the dom
+            let requery = document.querySelectorAll('li')
+            console.log(requery)
+            console.log(requery.length)
+        </script>
+    </body>
+</html>
