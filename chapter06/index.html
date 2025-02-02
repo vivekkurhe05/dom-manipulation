@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Elements</title>
+    <style>
+        body {
+            background-color: rgb(74,59,206);
+            padding: 30px;
+        }
+        h1 {
+            color: #14FFF7;
+            font-size: 72px;
+            font-family: sans-serif;
+            text-decoration: underline;
+        }
+        p {
+            color: #14FFF7;
+            font-size: 36px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Am I real?</h1>
+    <script>
+        let newElement = document.createElement('p')
+        newElement.textContent = "Or am I a figment of your imagination?"
+
+        // step 1 - let's grab the parent
+        let bodyElement = document.querySelector('body')
+
+        // step 2 - let's now attach our p tag to body
+        bodyElement.appendChild(newElement)
+    </script>
+</body>
+</html>
