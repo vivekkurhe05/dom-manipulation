@@ -4,11 +4,11 @@
  * 
  * Difference between childNodes and children
  * 
- * 1. childNodes returns a NodeList.
- * 2. .childNodes returns all node children including text node
+ * 1. childNodes returns a NodeList. It can contain (text, comments, elements, script, etc)
+ * 2. .childNodes returns all node children including text node, element node, comment node
  * 
- * 1. children returns an HTMLCollection
+ * 1. children returns an HTMLCollection (only elements)
  * 2. .children is a property of an element
- * 3. only elements have .children
- * 4. these children are all of type Element 
+ * 3. Only elements have .children
+ * 4. These children are all of type Element 
  */
