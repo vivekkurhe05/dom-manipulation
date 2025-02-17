@@ -11,10 +11,10 @@
  * element.textContent = "" // sets text to the element
  * parentElem.appendChild(childElem) - appends child element
  * element.insertBefore(newElem, Elem you want to inerted before)
- * element.removeChild() - removes child element
+ * element.removeChild(childElem) - removes child element of the parent
  * element.remove() - removes element from the dom
  * children - returns HTMLCollection of element's child elements
- * childNodes - returns a NodeList of element's child nodes (e.g element, text, comment)
+ * childNodes - returns a NodeList of element's child nodes (e.g element, text, comment, spaces)
  * nodeType
  * nodeName
  * nodeValue
@@ -27,4 +27,5 @@
  * element.firstElementChild - returns first child element of parent element
  * element.lastElementChild - returns last child element of parent element
  * element.childElementCount - returns length of HTMLCollection of parent element
+ * input.value - returns value of the text field.
  */
