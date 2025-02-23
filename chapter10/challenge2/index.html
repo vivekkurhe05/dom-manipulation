@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dot {
+            background-color: black;
+            width: 0.5em;
+            height: 0.5em;
+            border-radius: 2px;
+            position: absolute;
+            top: 50px;
+            left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./bg.jpg" width="300px" height="200px" id="bg">
+    <div id="message"></div>
+    <script>
+        // step1: grab our image element
+        let background = document.getElementById('bg')
+        // step2: defining our handler function
+        let onMouseMove = (e) => {
+            // a. grab our div element that we want to insert text into
+            let message = document.getElementById('message')
+            // b. define our main handler functionality
+            message.textContent += `Hi `
+            // create our new dot div
+            let dotDiv = document.createElement('div')
+            dotDiv.className='dot'
+            document.body.appendChild(dotDiv)
+            // lets access our event object and dynamically update the top and left style properties
+            console.log(e)
+            dotDiv.style.top = `${e.clientY}px`;
+            dotDiv.style.left = `${e.clientX-2}px`;
+        }
+        // step3: attach our event listener
+        background.addEventListener('mousemove', onMouseMove)
+    </script>
+</body>
+</html>

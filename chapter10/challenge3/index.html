@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mustache {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <img id="person" src="./face.webp" width="300px" alt="person image">
+    <img id="mustache" src="mustache2.jpg" width="200px" alt="mustache image">
+</body>
+<script>
+    // step1: grab the person image
+    let personPic = document.getElementById('person')
+    // step2: define our handler function
+    let onPersonClick = (e) => {
+        // lets grab our mustache picture
+        let mustachePic = document.getElementById('mustache')
+        // grab our event object and use that to figure out the user mouse position
+        let top = e.clientY;
+        let left = e.clientX;
+        // make the position of the mustache the same as the mouse position
+        mustachePic.style.top = `${top-54}px`;
+        mustachePic.style.left = `${left-100}px`;
+    }
+    // step 3: attach a click event to the person image
+    personPic.addEventListener('click', onPersonClick)
+</script>
+</html>
