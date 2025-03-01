@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="three-a">
+        <button id="button1">Button One</button>
+    </div>
+</body>
+<script>
+    let buttonOne = document.getElementById('button1')
+    // lets execute our handler in the capturing phase
+    buttonOne.addEventListener('click', clickHandler, true)
+    // lets execute our handler in the bubbling phase (this is default)
+    buttonOne.addEventListener('click', clickHandler, false)
+    // add listener on our div parent element
+    let threeA = document.getElementById('three-a')
+    threeA.addEventListener('click', quitIt, true)
+    function quitIt(e) {
+        console.log('You have been stopped in your tracks')
+        e.stopPropagation()
+    }
+
+    // define our handler
+    function clickHandler() {
+        console.log('I have been clicked')
+    }
+</script>
+</html>

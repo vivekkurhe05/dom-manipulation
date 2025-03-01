@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body * {
+            margin: 10px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div>DIV
+        <form action="">FORM
+            <p>P</p>
+        </form>
+    </div>
+</body>
+<script>
+    for(const DOMElement of document.querySelectorAll('*')) { // e.g. ["html", "body", "div", "form", "p"]
+         DOMElement.addEventListener('click', () => {
+            alert(`Cpaturing: ${DOMElement.tagName}`)
+         }, true)
+
+         DOMElement.addEventListener('click', () => alert(`Bubbling: ${DOMElement.tagName}`))
+    }
+</script>
+</html>
