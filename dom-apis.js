@@ -10,10 +10,10 @@
  * element.textContent - return text of the element
  * element.textContent = "" // sets text to the element
  * parentElem.appendChild(childElem) - appends child element
- * element.insertBefore(newElem, Elem you want to inerted before)
- * element.removeChild(childElem) - removes child element of the parent
+ * element.insertBefore(newElem, Elem you want to insert before)
+ * parentElem.removeChild(childElem) - removes child element of the parent
  * element.remove() - removes element from the dom
- * children - returns HTMLCollection of element's child elements
+ * children - returns HTMLCollection of parent's child elements
  * childNodes - returns a NodeList of element's child nodes (e.g element, text, comment, spaces)
  * nodeType
  * nodeName
@@ -28,4 +28,13 @@
  * element.lastElementChild - returns last child element of parent element
  * element.childElementCount - returns length of HTMLCollection of parent element
  * input.value - returns value of the text field.
+ * classList - this property returns the CSS classnames of an element.
+ * className - this property overrides the existing class name.
+ */
+
+/**
+ * Notes:
+ * 
+ * 1. HTMLCollection is not an array. So you cannot use forEach on HTMLCollection. You should use for loop.
+ * 2. You can use forEach on NodeList.
  */

@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <a href="http://www.google.com">Lets go to Google</a>
+    </body>
+    <script>
+        let anchor = document.getElementsByTagName('a')[0];
+        anchor.addEventListener('click', (e) => {
+            e.preventDefault(); // it prevents default behaviour like redirection
+            anchor.textContent = 'Default behaviour has been prevented'
+        })
+    </script>
+</html>
